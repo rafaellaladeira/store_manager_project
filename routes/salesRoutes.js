@@ -5,5 +5,7 @@ const control = require('../controllers/salesControl');
 const salesRoutes = Router();
 
 salesRoutes.post('/', salesValidation, control.registerSales);
+salesRoutes.get('/', control.allSales);
+salesRoutes.get('/:id', control.allProductsById);
 
 module.exports = salesRoutes;
