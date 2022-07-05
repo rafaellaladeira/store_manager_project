@@ -95,5 +95,25 @@
       }
     ],
     "tests": []
+  },
+  {
+    "_id": "7b961193-d6d9-419d-803f-ab0b3ffc93d9",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/search?q=artelo",
+    "url": "localhost:3000/products/search?q=artelo",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-05T15:28:36.987Z",
+    "modified": "2022-07-05T15:28:37.015Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "q",
+        "value": "artelo",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]
