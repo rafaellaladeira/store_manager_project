@@ -4,6 +4,7 @@ const productsValidation = require('../middlewares/productsValidation');
 
 const productsRoutes = Router();
 
+productsRoutes.get('/search', control.getBySearch);
 productsRoutes.get('/:id', control.getById);
 productsRoutes.put('/:id', productsValidation, control.updateProduct);
 productsRoutes.delete('/:id', control.deleteProduct);
