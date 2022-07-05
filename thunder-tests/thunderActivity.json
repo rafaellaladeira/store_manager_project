@@ -101,19 +101,18 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products/search?q=artelo",
-    "url": "localhost:3000/products/search?q=artelo",
-    "method": "GET",
+    "url": "localhost:3000/sales/1",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2022-07-05T15:28:36.987Z",
-    "modified": "2022-07-05T15:28:37.015Z",
+    "modified": "2022-07-05T20:04:47.814Z",
     "headers": [],
-    "params": [
-      {
-        "name": "q",
-        "value": "artelo",
-        "isPath": false
-      }
-    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n    {\n      \"productId\": 1,\n      \"quantity\":5\n    },\n    {\n      \"productId\": 1,\n      \"quantity\":50\n    }\n  ]",
+      "form": []
+    },
     "tests": []
   }
 ]

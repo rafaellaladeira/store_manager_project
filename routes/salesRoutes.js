@@ -7,6 +7,7 @@ const salesRoutes = Router();
 salesRoutes.post('/', salesValidation, control.registerSales);
 salesRoutes.get('/', control.allSales);
 salesRoutes.get('/:id', control.allProductsById);
+salesRoutes.put('/:id', salesValidation, control.updateSales);
 salesRoutes.delete('/:id', control.deleteSales);
 
 module.exports = salesRoutes;
