@@ -62,18 +62,13 @@ const deleteSales = async (id) => {
 
 const updateSales = async (info) => {
   const { id, dataUpdate } = info;
-  const query1 = 'SELECT id FROM StoreManager.products WHERE id=?;';
-  
-  const query2 = 'SELECT id FROM StoreManager.sales WHERE id=?;';
-  const [promise2] = await connection.execute(query2, [id]);
   
   const query = `UPDATE StoreManager.sales_products 
   SET quantity=? WHERE sale_id=? AND product_id=?`;
 
-  await Promise.all(dataUpdate.map(async (e) => {
-    const [promise1] = await connection.execute(query1, [e.productId]);
-    await connection.execute(query, [e.quantity, promise2[0].id, promise1[0].id]);
-  }));
+  dataUpdate.map(async (e) => {
+    await connection.execute(query, [e.quantity, id, e.productId]);
+  });
   return true;
 };
 
