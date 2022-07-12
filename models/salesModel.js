@@ -55,7 +55,7 @@ const deleteSales = async (id) => {
   const query2 = 'DELETE FROM StoreManager.sales_products WHERE sale_id=?;';
   await Promise.all(
     await connection.execute(query, [id]),
-    connection.execute(query2, [2]),
+    connection.execute(query2, [id]),
   );
   return true;
 };
